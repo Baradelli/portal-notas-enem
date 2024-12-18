@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notas - Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="login-container container">
+      <div class="scoreboard">
+        <h2>Top 3</h2>
+        <div class="score-item first">
+          <span class="placement">1º</span>
+          <span class="crown">
+            <img src="crown-solid.svg" alt="Coroa" />
+          </span>
+          <span class="name"></span>
+          <span class="points"></span>
+        </div>
+        <div class="score-item second">
+          <span class="placement">2º</span>
+          <span class="name"></span>
+          <span class="points"></span>
+        </div>
+        <div class="score-item third">
+          <span class="placement">3º</span>
+          <span class="name"></span>
+          <span class="points"></span>
+        </div>
+      </div>
+
+      <div class="login-card">
+        <h1>Portal de Notas</h1>
+        <p>Faça login para ver suas notas</p>
+        <div class="login-form">
+          <label for="name">Nome:</label>
+          <select id="name">
+            <!-- Opções geradas dinamicamente pelo JS -->
+          </select>
+
+          <label for="password">Senha:</label>
+          <input type="password" id="password" placeholder="Digite a senha" />
+
+          <button id="login-btn">Entrar</button>
+          <p id="error-message"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="result-container container" style="display: none">
+      <div class="result-card">
+        <h2 id="student-name"></h2>
+        <div id="scores"></div>
+        <button id="logout-btn">Sair</button>
+      </div>
+    </div>
+
+    <!-- Container para confetes (inserido dinamicamente via JS) -->
+    <div id="confetti-container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
